@@ -40,7 +40,7 @@ h2 {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 30px;
   padding-top: 15px;
   padding-right: 30px;
   padding-bottom: 15px;
@@ -49,6 +49,7 @@ h2 {
   cursor: pointer;
   background-color: rgb(235, 212, 69);
   color: rgb(118, 147, 223);
+  border-radius: 120px;
 }
 
 .content .lead-button:hover {
