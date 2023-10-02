@@ -1,6 +1,17 @@
-body {
+
+
+.index {
   background-color: #000;
   background-image: url("../img/6006821.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.edades {
+  background-color: #000;
+  background-image: url("../img/Fondo.png");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +26,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 .content h1,
@@ -55,4 +66,72 @@ h2 {
 .content .lead-button:hover {
   color: #fff;
   background-color: rgb(235, 200, 69);
+}
+
+.content .edad span {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  z-index: 3; 
+}
+.content .edad {
+  display: block;
+  height: 73px;
+  width: 250px;
+  margin: 1% auto; 
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-right: 32px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #9CC6A6;
+  color: rgb(118, 147, 223);
+  border-radius: 100px;
+  position: relative; 
+}
+
+.content .edad::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px;
+  border: 10px solid white; 
+  background-color: white;
+  border-radius: 110px; 
+  z-index: 3;
+}
+
+.edadTexto {
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Arial, sans-serif; 
+  font-size: 60px;
+  font-weight: bold; 
+  -webkit-text-stroke: 3.5px #615789;
+  text-stroke: 3.5px #615789;
+}
+
+.edadTitulo {
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Best Love DEMO;
+  font-size: 60px;
+  margin: 20px;
+  font-weight: 400;
+  line-height: bold;
+  -webkit-text-stroke: 4px #615789; /* Agregamos un borde azul al texto */
+  text-stroke: 4px #615789; /* Agregamos un borde azul al texto */
 }
