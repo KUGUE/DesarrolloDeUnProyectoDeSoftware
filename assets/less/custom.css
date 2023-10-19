@@ -120,11 +120,6 @@
   left: 50%;
 }
 
-img {
-  margin-top: 10px;
-  width: 130px;
-  height: 130px;
-}
 
 .botoncategoria,
 .botonNumero {
@@ -175,7 +170,7 @@ h2 {
   margin: 0 auto;
   text-transform: uppercase;
   text-decoration: none;
-  font-family: "FUENTEPRUEBA", sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 30px;
   padding-top: 15px;
   padding-right: 30px;
@@ -285,7 +280,7 @@ h2 {
   font-weight: 400;
   line-height: bold;
   -webkit-text-stroke: 3px #615789;
-  
+  font-family: 'Anton', sans-serif;
 }
 
 
@@ -382,7 +377,6 @@ h2 {
 
 /* imagenes de los contenedores */
 img {
-  margin-top: 10px;
   width: 130px;
   height: 130px;
 }
