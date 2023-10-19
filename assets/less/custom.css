@@ -1,9 +1,64 @@
+/* boton empezar */
+
+/* Estilos para el botón empezar*/
+.lead-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #9974ff;
+  color: #3498db;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.lead-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #93b6f7;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+.lead-button:hover {
+  color: #fff;
+  background-color: #78c9ff;
+  transform: translateY(-5px);
+}
+
+.lead-button:hover:before {
+  transform: scaleX(1);
+}
+
+/* Animación al presionar el botón */
+.lead-button:active {
+  transform: scale(0.95);
+}
+
+/*  */
+
 .card-img-top {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+@font-face {
+  font-family: 'Anton';
+  src: url('assets/fuentes/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 #player-container #play-pause {
   cursor: pointer;
   text-indent: -999999px;
@@ -48,19 +103,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.categoria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  border-radius: 10px;
-  border: 3px solid #FFF;
-  background: rgba(141, 189, 235, 0.90);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 80%;
-  width: 70%;
 }
 
 .grupo {
@@ -118,10 +160,12 @@ h2 {
 }
 
 .content h1 {
+  font-size: 80px;
   color: aliceblue;
 }
 
 .content h2 {
+  font-size: 40px;
   color: yellow;
   margin-bottom: 10px;
 }
@@ -187,6 +231,15 @@ h2 {
   border-radius: 100px;
   position: relative;
 }
+.content .edad:hover {
+    background: linear-gradient(135deg, #83d8ff, #65e5ff);
+    transform: scale(1.05);
+}
+
+.content .edad:active {
+    background: linear-gradient(135deg, #4d6672, #7e9dac);
+    transform: scale(0.95);
+}
 
 .content .edad::before {
   content: "";
@@ -228,7 +281,6 @@ h2 {
 .subtitulos {
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: 'Anton', sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: bold;
@@ -251,6 +303,53 @@ font-family: 'Anton', sans-serif;
 
 
 .categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+}
+
+.categoriamedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+}
+.categorianumeros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+}
+
+.categoriaulti{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -374,6 +473,21 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
+.categoriamedia{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.categoriaulti{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.categorianumeros{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
 
 .tarjeta {
   border: 1px solid #ddd;
@@ -402,8 +516,9 @@ body {
   transition: transform 0.2s;
 }
 
+
 .tarjeta:active {
-  background-color: #afb5ff;
+  background-color: #c6caf8;
 }
 
 /* vocales responsive */

@@ -29,3 +29,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.body.insertAdjacentHTML('afterbegin', nav);
 });
+
