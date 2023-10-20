@@ -205,7 +205,6 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: 'Anton', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,8 +291,19 @@ h2 {
 
 
 /* edades 4-5 responsive */
+.back a {
+  padding-bottom: 5px;
+  padding-left: 20px;
+  display: flex;
+  bottom: 0;
+  left: 0;
+}
 
+.back .img{
+  width: 7vw ;
+  height: 6vw  ;
 
+}
 .index {
   background-color: #000;
   background-image: url("../img/6006821.jpg");
