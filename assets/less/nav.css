@@ -10,7 +10,8 @@ nav{
   z-index: 99;
   width: 100%;
   
-  background: #242526;
+  background: #4d4e91;
+  opacity: 0.7;
 }
 nav .wrapper{
   position: relative;

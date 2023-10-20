@@ -139,6 +139,7 @@
 .content {
   width: 80%;
   margin: auto;
+  margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,6 +147,7 @@
   text-align: center;
   margin-top: 8%;
 }
+
 
 .content h1,
 h2 {
@@ -396,16 +398,6 @@ img {
   font-size: 18px;
 }
 
-.content {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 8%;
-}
 
 .content h1,
 h2 {
