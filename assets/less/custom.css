@@ -53,12 +53,14 @@
   height: 100%;
   object-fit: cover;
 }
+
 @font-face {
   font-family: 'Anton';
   src: url('assets/fuentes/Anton-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 #player-container #play-pause {
   cursor: pointer;
   text-indent: -999999px;
@@ -90,6 +92,7 @@
   background-image: url("../img/Fondo.png");
   background-attachment: fixed;
   background-size: cover;
+  margin-top: 0;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -136,16 +139,17 @@
   font-size: 18px;
 }
 
+
+
 .content {
   width: 80%;
   margin: auto;
-  margin-top: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-top: 8%;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 
@@ -228,14 +232,15 @@ h2 {
   border-radius: 100px;
   position: relative;
 }
+
 .content .edad:hover {
-    background: linear-gradient(135deg, #83d8ff, #65e5ff);
-    transform: scale(1.05);
+  background: linear-gradient(135deg, #83d8ff, #65e5ff);
+  transform: scale(1.05);
 }
 
 .content .edad:active {
-    background: linear-gradient(135deg, #4d6672, #7e9dac);
-    transform: scale(0.95);
+  background: linear-gradient(135deg, #4d6672, #7e9dac);
+  transform: scale(0.95);
 }
 
 .content .edad::before {
@@ -330,7 +335,8 @@ h2 {
   height: 80%;
   width: 70%;
 }
-.categorianumeros{
+
+.categorianumeros {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,7 +352,7 @@ h2 {
   width: 70%;
 }
 
-.categoriaulti{
+.categoriaulti {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,6 +388,7 @@ img {
   width: 130px;
   height: 130px;
 }
+
 /*  */
 
 .botoncategoria {
@@ -445,31 +452,28 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  margin-top: 0;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 
 .categoria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
 }
-.categoriamedia{
+
+.categoriamedia {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-.categoriaulti{
+
+.categoriaulti {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-.categorianumeros{
+
+.categorianumeros {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -481,7 +485,8 @@ body {
   border-radius: 10px;
   text-align: center;
 }
-.tarjeta a{
+
+.tarjeta a {
   text-decoration: none;
 }
 
@@ -508,7 +513,7 @@ body {
 }
 
 /* vocales responsive */
-.tarjeta2 a{
+.tarjeta2 a {
   text-decoration: none;
 }
 
