@@ -1,5 +1,14 @@
 /* boton empezar */
-
+.back {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px; /* Ajusta el margen según tus necesidades */
+}
+.back img{
+  width: 8vw ;
+  height: 7vw  ;
+}
 /* Estilos para el botón empezar*/
 .lead-button {
   display: inline-block;
@@ -154,10 +163,30 @@
   margin-bottom: 100px;
 }
 
+.vocal-2{
+  color: #000000; /* Establece el color del texto en negro */
+  background-color: #ffffff; /* Establece el fondo del texto en blanco */
+  border: 2px solid #7C73A1; /* Establece un borde sólido negro (2px de ancho) */
+  padding: 10px; /* Añade un espacio interno para separar el texto del borde */
+  border-radius: 10px;
+}
+.vocal{
+  color: #ca1010; /* Establece el color del texto en negro */
+  background-color: #ffffff; /* Establece el fondo del texto en blanco */
+  border: 2px solid #7C73A1; /* Establece un borde sólido negro (2px de ancho) */
+  padding: 10px; /* Añade un espacio interno para separar el texto del borde */
+  border-radius: 10px;
+}
+.content h3 {
+  margin-top: 20px;
+  font-size: 4vw;
+  color: red; /* Establece el color del texto en negro */
+
+}
+
 
 .content h1,
 h2 {
-
   text-transform: uppercase;
   margin: 5px;
 }
@@ -299,19 +328,7 @@ h2 {
 
 
 /* edades 4-5 responsive */
-.back {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 20px; /* Ajusta el margen según tus necesidades */
-}
 
-
-.back .img{
-  width: 7vw ;
-  height: 6vw  ;
-
-}
 .index {
   background-color: #000;
   background-image: url("../img/6006821.jpg");
