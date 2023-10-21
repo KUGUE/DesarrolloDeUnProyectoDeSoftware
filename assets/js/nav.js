@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
         <nav class="navbar">
             <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Soporte</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Edades.html">Edades</a></li>
+                <li><a href="/Videos.html">Videos</a></li>
+                <li><a href="/Soporte.html">Soporte</a></li>
             </ul>
         </nav>
     `;

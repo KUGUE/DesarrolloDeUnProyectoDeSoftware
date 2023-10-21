@@ -290,16 +290,22 @@ h2 {
   -webkit-text-stroke: 3px #615789;
   font-family: 'Anton', sans-serif;
 }
+#regresar {
+  background: none; /* Elimina el fondo */
+  border: none; /* Elimina el borde */
+  padding: 0; /* Elimina cualquier espacio de relleno */
+}
+
 
 
 /* edades 4-5 responsive */
 .back {
-  padding-bottom: 5px;
-  padding-left: 20px;
-  display: flex;
+  position: fixed;
   bottom: 0;
   left: 0;
+  margin: 20px; /* Ajusta el margen según tus necesidades */
 }
+
 
 .back .img{
   width: 7vw ;
