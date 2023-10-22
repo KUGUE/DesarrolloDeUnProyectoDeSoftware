@@ -50,53 +50,7 @@
       </div>
     </div>
   </div>
-  <script>
-    function speech() {
-      var text = document.querySelector(".edadTitulo").textContent;
-      if (text !== "") {
-        voz.text = text;
-        window.speechSynthesis.speak(voz);
-      }
-    }
-    var voz = new SpeechSynthesisUtterance();
-    voz.lang = "es-ES";
-    voz.volume = 1;
-    var timer = setInterval(function () {
-      var voices = speechSynthesis.getVoices();
-      if (voices.length !== 0) {
-        voz.voice = voices[0];
-        voz.voiceURI = voices[0].voiceURI;
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    setTimeout(function () {
-      speech();
-    }, 1000);
-    setTimeout(function () {
-      speechh();
-    }, 1000);
-
-    function speechh(vocal) {
-      var text = "vocal ,"+ vocal;
-      if (text !== "") {
-        voz.text = text;
-        window.speechSynthesis.speak(voz);
-      }
-    }
-    var voz = new SpeechSynthesisUtterance();
-    voz.lang = "es-ES";
-    voz.volume = 2.0
-    voz.rate = 0.6;
-    var timer = setInterval(function () {
-      var voices = speechSynthesis.getVoices();
-      if (voices.length !== 0) {
-        voz.voice = voices[0];
-        voz.voiceURI = voices[0].voiceURI;
-        clearInterval(timer);
-      }
-    }, 5000);
-  </script>
+  <script src="/assets/js/voces.js"></script>
 </body>
 
 </html>

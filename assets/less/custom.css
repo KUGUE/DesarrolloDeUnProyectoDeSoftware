@@ -1,5 +1,6 @@
 /* boton empezar */
 .back {
+  margin-top: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -294,11 +295,13 @@ h2 {
 .content .edad:hover {
   background: linear-gradient(135deg, #83d8ff, #65e5ff);
   transform: scale(1.05);
+
 }
 
 .content .edad:active {
   background: linear-gradient(135deg, #4d6672, #7e9dac);
   transform: scale(0.95);
+
 }
 
 .content .edad::before {
@@ -308,8 +311,7 @@ h2 {
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border: 10px solid white;
-  background-color: white;
+  background-color: rgb(255, 253, 253);
   border-radius: 110px;
   z-index: 3;
 }
@@ -325,6 +327,7 @@ h2 {
   text-decoration: none !important;
 
 }
+
 
 .edadTitulo {
   color: #ffffff;
@@ -350,11 +353,9 @@ h2 {
 
 #regresar {
   background: none;
-  /* Elimina el fondo */
   border: none;
-  /* Elimina el borde */
   padding: 0;
-  /* Elimina cualquier espacio de relleno */
+
 }
 
 
@@ -407,6 +408,22 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+}
+.categorianumeros2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
@@ -528,6 +545,12 @@ body {
   gap: 20px;
 }
 
+.categoria .ubicacion {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
 .categoriamedia {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -541,9 +564,13 @@ body {
 }
 
 .categorianumeros {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.categorianumeros2 .escrito{
+  background-color: #FFF;
 }
 
 .tarjeta {
@@ -551,6 +578,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   text-align: center;
+  background-color: #e3fffb;
 }
 
 .tarjeta a {
@@ -559,14 +587,58 @@ body {
 
 .imagen-container {
   max-width: 100%;
-  background-color: #fff;
+  background-color: #b1cde0;
   border-radius: 10px;
   padding: 10px;
+
+}
+
+
+.tarjeta .foto2 img {
+  width: 20px;
+  height: 20px;
+}
+
+.categorianumeros {
+  width: 60%;
+}
+
+.categorianumeros .tarjeta {
+  width: 50%;
+}
+
+
+/* mostrar texto de numero */
+.numero {
+  font-size: 40px;
+  color: #000000;
+  padding: 10px;
+  border: 10px solid #2980b9;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+.escrito{
+  min-width: 100px;
+  font-size: 40px;
+  color: #2e0000;
+  padding: 10px;
+  border: 10px solid #2980b9;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  
+}
+.tarjeta .escrito{
+  background-color: #e3fffb;
 }
 
 .imagen-container img {
   max-width: 100%;
 }
+
 
 .tarjeta:hover {
   transform: scale(1.1);
@@ -602,3 +674,42 @@ body {
 .tarjeta2:active {
   background-color: #afb5ff;
 }
+
+/* videos */
+.content .video {
+  justify-content: center;
+}
+
+.content .video video {
+  width: 90%;
+  height: auto;
+}
+
+
+/* Estilos específicos para los botones izquierdo y derecho */
+.izq,
+.der {
+  background-color: #e3fffb;
+  color: #000000;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.izq:hover,
+.der:hover {
+  background-color: #c6caf8;
+  transform: scale(1.1);
+}
+
+
