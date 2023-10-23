@@ -40,8 +40,8 @@ voz.volume = 1;
 var timer = setInterval(function () {
   var voices = speechSynthesis.getVoices();
   if (voices.length !== 0) {
-    voz.voice = voices[4];
-    voz.voiceURI = voices[4].voiceURI;
+    voz.voice = voices[7];
+    voz.voiceURI = voices[7].voiceURI;
     clearInterval(timer);
   }
   console.log(voices)
@@ -140,4 +140,6 @@ function convertirNumeroEnPalabras(numero) {
   }
 
 }
+
+
 
