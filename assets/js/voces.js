@@ -10,24 +10,15 @@ var voz = new SpeechSynthesisUtterance();
 voz.lang = "es-ES";
 voz.volume = 1;
 
-// Definir la voz que deseas utilizar
-var voiceToUse = null;
+// Define el índice de la voz que deseas utilizar
+var voiceIndex = 4; // Este es el índice de "Google español" en el arreglo de voces
 
 var timer = setInterval(function () {
   var voices = speechSynthesis.getVoices();
   if (voices.length !== 0) {
-    // Busca la voz que deseas utilizar, por ejemplo, por su nombre.
-    for (var i = 0; i < voices.length; i++) {
-      if (voices[i].name === "Google español") {
-        voiceToUse = voices[i];
-        break;
-      }
-    }
-
-    // Si se encontró la voz, configúrala
-    if (voiceToUse) {
-      voz.voice = voiceToUse;
-      voz.voiceURI = voiceToUse.voiceURI;
+    if (voiceIndex < voices.length) {
+      voz.voice = voices[voiceIndex];
+      voz.voiceURI = voices[voiceIndex].voiceURI;
       clearInterval(timer);
     }
   }
