@@ -18,14 +18,12 @@
 .next {
   position: fixed;
   bottom: 0;
-  right: 0; /* Ajusta la posición para que esté en el lado derecho de la pantalla */
+  right: 0;
   margin: 20px;
-  color: #FF6B81; /* Color del texto rojo */
-  font-size: 24px; /* Tamaño del texto */
-  text-shadow: 3px 0 0 rgba(0, 0, 0, 0.5); /* Sombra a la derecha del texto */
+  color: #FF6B81;
+  font-size: 24px; 
+  text-shadow: 3px 0 0 rgba(0, 0, 0, 0.5); 
 }
-
-
 
 .next img {
   width: 8vw;
@@ -35,14 +33,44 @@
 /* SECCION PALABRAS VOCALES */
 .card-title {
   margin-top: 80px;
-  color: #FF6B81; /* Color del texto rojo */
+  color: #FF6B81;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; /* Borde negro de 3px alrededor del texto en navegadores webkit (Safari, Chrome) */
-  text-stroke: 5px black; /* Borde negro de 5px alrededor del texto en navegadores no webkit (Firefox, Edge, etc.) */
-  text-shadow: 5px 0 0 #e2052799; /* Sombra a la derecha del texto */
+  -webkit-text-stroke: 3px black; 
+  text-stroke: 5px black; 
+  text-shadow: 5px 0 0 #e2052799; 
 }
-
-
+.E{
+  margin-top: 80px;
+  color: #F79E60;
+  font-size: 60px;
+  -webkit-text-stroke: 3px black; 
+  text-stroke: 5px black; 
+  text-shadow: 5px 0 0 #AF5837; 
+}
+.I{
+  margin-top: 80px;
+  color: #03CFC9;
+  font-size: 60px;
+  -webkit-text-stroke: 3px black; 
+  text-stroke: 5px black; 
+  text-shadow: 5px 0 0 #00CEC8; 
+}
+.O{
+  margin-top: 80px;
+  color: #FF83DC;
+  font-size: 60px;
+  -webkit-text-stroke: 3px black; 
+  text-stroke: 5px black; 
+  text-shadow: 5px 0 0 #FF60CF; 
+}
+.U{
+  margin-top: 80px;
+  color: #FBDF63;
+  font-size: 60px;
+  -webkit-text-stroke: 3px black; 
+  text-stroke: 5px black; 
+  text-shadow: 5px 0 0 #F4AE22; 
+}
 /* Estilos para el botón empezar*/
 .lead-button {
   display: inline-block;
@@ -98,36 +126,6 @@
 }
 
 
-#player-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#play-pause {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 24px;
-  width: 100px;
-  height: 100px;
-  line-height: 80px;
-  border-radius: 50%;
-  color: #3498db;
-  background-color: white;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
-}
-
-#play-pause::before {
-  content: '\25B6';
-  font-size: 50px;
-}
-
-#play-pause:active {
-  transform: scale(1.1) rotate(180deg);
-  transition: transform 0.1s ease;
-  background-color: #000000;
-}
 
 
 /* edades vista */
@@ -210,8 +208,25 @@
 
 }
 
+/*VOCALES CONTENEDOR */
+.vocal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+}
+
 .vocal-2 {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-content: center;
   background-color: #ffffff;
@@ -776,6 +791,12 @@ input[type="number"] {
   h1.edadTitulo {
       font-size: 50px;
   }
+  h3.card-title{ 
+    font-size: 40px;
+  }
+  
+
+
   .categoriamedia, .categoria, .categoria .ubicacion,.categoriaulti  {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
