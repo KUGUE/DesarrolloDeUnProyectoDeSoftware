@@ -1,16 +1,45 @@
-/* boton empezar */
+/* boton regresar */
 .back {
   margin-top: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
   margin: 20px;
-  /* Ajusta el margen según tus necesidades */
 }
 
 .back img {
   width: 8vw;
   height: 7vw;
+}
+
+
+
+/* boton regresar */
+.next {
+  position: fixed;
+  bottom: 0;
+  right: 0; /* Ajusta la posición para que esté en el lado derecho de la pantalla */
+  margin: 20px;
+  color: #FF6B81; /* Color del texto rojo */
+  font-size: 24px; /* Tamaño del texto */
+  text-shadow: 3px 0 0 rgba(0, 0, 0, 0.5); /* Sombra a la derecha del texto */
+}
+
+
+
+.next img {
+  width: 8vw;
+  height: 7vw;
+}
+
+/* SECCION PALABRAS VOCALES */
+.card-title {
+  margin-top: 80px;
+  color: #FF6B81; /* Color del texto rojo */
+  font-size: 60px;
+  -webkit-text-stroke: 3px black; /* Borde negro de 3px alrededor del texto en navegadores webkit (Safari, Chrome) */
+  text-stroke: 5px black; /* Borde negro de 5px alrededor del texto en navegadores no webkit (Firefox, Edge, etc.) */
+  text-shadow: 5px 0 0 #e2052799; /* Sombra a la derecha del texto */
 }
 
 
