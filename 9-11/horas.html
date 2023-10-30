@@ -1,76 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="/assets/less/custom.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/less/minijuegos.css">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
 
-  <body class="edades">
-    <div class="content">
-      <h3 class="edadTitulo">Selecciona un nivel</h3>
+    iframe {
+   position: absolute;
+   width: 100vw !important;
+   height: 100vh !important;
+   padding: 0 !important;
+   margin: 0 !important;
+   overflow:hidden;
+}
 
-      <div class="categoria">
-        <div class="grupo">
-          <div class="botonNumero">
-            <a href="/9-11/horas1.html">
-              <img src="/assets/img/numeros/1.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas2.html">
-              <img src="/assets/img/numeros/2.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas3.html">
-              <img src="/assets/img/numeros/3.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas4.html">
-              <img src="/assets/img/numeros/4.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas5.html">
-              <img src="/assets/img/numeros/5.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas6.html">
-              <img src="/assets/img/numeros/6.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas7.html">
-              <img src="/assets/img/numeros/7.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas8.html">
-              <img src="/assets/img/numeros/8.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas9.html">
-              <img src="/assets/img/numeros/9.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/horas10.html">
-              <img src="/assets/img/numeros/10.jpg" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    .overlay {
+  width: 80vh;
+  height: 5.4%; /* Cambiado para ocupar solo la parte inferior */
+  background: black;
+  position: fixed;
+bottom: 0px;
+  left: 0;
+  z-index: 2;
+  
+}
+
+  </style>
+</head>
+<body>
+  <iframe src='https://www.minijuegos.mx/embed/fill-pix'  frameborder='0' allowfullscreen></iframe>
+  <div class="overlay"></div>
+</body>
 </html>

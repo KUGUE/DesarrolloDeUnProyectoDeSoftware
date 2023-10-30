@@ -12,9 +12,7 @@
   height: 7vw;
 }
 
-
-
-/* boton regresar */
+/* boton siguiente */
 .next {
   position: fixed;
   bottom: 0;
@@ -24,12 +22,46 @@
   font-size: 24px; 
   text-shadow: 3px 0 0 rgba(0, 0, 0, 0.5); 
 }
-
 .next img {
   width: 8vw;
   height: 7vw;
 }
 
+/* SECCION PARA LECTURAS */
+.animales{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: 3px solid #FFF;
+  background: rgba(141, 189, 235, 0.90);
+  box-shadow: 15px 20px 4px 0px rgba(0, 0, 0, 0.25);
+  height: 80%;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.animalestarjeta{
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e3fffb;
+  margin-bottom: 15px;
+  
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.animalestarjeta a{
+  
+  text-decoration: none;
+}
 /* SECCION PALABRAS VOCALES */
 .card-title {
   margin-top: 80px;
