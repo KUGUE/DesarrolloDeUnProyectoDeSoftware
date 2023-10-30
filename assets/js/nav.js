@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap" rel="stylesheet">
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/Edades.html">Actividades</a></li>
-                <li><a href="/Lecturas/Lecturas.html">Lecturas</a></li>
-                <li><a href="/Soporte/Soporte.html">Soporte</a></li>
-            </ul>
-        </nav>
-    `;
+    <input type="checkbox" id="menu-toggle"/>
+    <label id="trigger" for="menu-toggle"></label>
+    <label id="burger" for="menu-toggle"></label>
+    <ul id="menu">
+    <li><a href="/index.html">Inicio</a></li>
+    <li><a href="/Edades.html">Actividades</a></li>
+    <li><a href="/Lecturas/Lecturas.html">Lecturas</a></li>
+    <li><a href="/Soporte/Soporte.html">Soporte</a></li>
+    </ul>
+    `
 
     document.body.insertAdjacentHTML('afterbegin', nav);
 });

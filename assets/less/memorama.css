@@ -50,10 +50,11 @@ body {
 	text-transform: uppercase;
 	background: #684b7a;
 	padding: 5px 10px;
-	margin: 5px;
+
 	border-radius: 10px;
 	cursor: pointer;
 }
 #boxbuttons .button:hover {
 	background: #999;
 }
+

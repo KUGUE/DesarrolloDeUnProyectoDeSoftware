@@ -1,52 +1,51 @@
-body{
-    background: #303030;
-  }
-  h1 {
-    color: #CA7218;
-    text-align: center;
-  }
-  
-  /* Contenedor del puzzle*/
-  #contenedorPuzzle {
-      margin: 20px auto;
-      width: 450px;
-      background: rgba(20,20,20,0.8);
-      box-shadow: 0px 0px 10px  2px #777;
-      color: #ccc;
-      padding: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-  }
-  
-  
-  /* Puzzle */
-  #contenedorPiezas{
-      background: #e7931a;
-      width: 200px;
-      height: 200px;
-      float: left;
-      margin-left: 10px;
-      box-shadow: 0px 0px 10px  2px #d0eb6a;
-  }
-  
-  #puzzle {
-      background: #d0eb6a;
-      width: 200px;
-      height: 200px;
-      float: right;
-      margin-right: 10px;
-      box-shadow: 0px 0px 10px  2px #e7931a;
-  }
-  .contenedorPieza {
-      width: 100px;
-      height: 100px;
-      float: left;
-  }
-  
-  #contenedorPuzzle img {
-      float: left;
-      padding: 1px;
-      width: 98px;
-      height: 98px;
-  }
-  
+body {
+    background: #222;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+}
+
+span {
+    color: #FFF;
+}
+
+div#content {
+    margin-top: 10px;
+}
+
+div#conf {
+    padding-bottom: 10px;
+}
+
+table {
+    border: 2px solid green;
+    box-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    -webkit-box-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    border-collapse: collapse;
+}
+
+td.pieza {
+    background: url(/assets/img/puzzle.jpg);
+    transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+div.posic {
+    background: #FFF;
+    border: 1px solid #700000;
+    width: 150px;
+    display: none;
+
+}
+
+div#titulo {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+}

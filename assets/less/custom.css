@@ -5,9 +5,10 @@
   bottom: 0;
   left: 0;
   margin: 20px;
+  z-index: 0;
 }
 
-.back img {
+.back img { 
   width: 8vw;
   height: 7vw;
 }
