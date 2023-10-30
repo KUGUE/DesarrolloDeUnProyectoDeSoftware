@@ -10,67 +10,32 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="/assets/less/puzzle.css" />
     <link rel="stylesheet" type="text/css" href="/assets/less/custom.css" />
   </head>
 
   <body class="edades">
     <div class="content">
-      <h3 class="edadTitulo">Selecciona un nivel</h3>
-
-      <div class="categoria">
-        <div class="grupo">
-          <div class="botonNumero">
-            <a href="/9-11/objetos1.html">
-              <img src="/assets/img/numeros/1.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos2.html">
-              <img src="/assets/img/numeros/2.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos3.html">
-              <img src="/assets/img/numeros/3.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos4.html">
-              <img src="/assets/img/numeros/4.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos5.html">
-              <img src="/assets/img/numeros/5.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos6.html">
-              <img src="/assets/img/numeros/6.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos7.html">
-              <img src="/assets/img/numeros/7.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos8.html">
-              <img src="/assets/img/numeros/8.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos9.html">
-              <img src="/assets/img/numeros/9.jpg" alt="" />
-            </a>
-          </div>
-          <div class="botonNumero">
-            <a href="/9-11/objetos10.html">
-              <img src="/assets/img/numeros/10.jpg" alt="" />
-            </a>
-          </div>
-        </div>
+     <header>
+      <h1> Un puzzle de cuatro piezas </h1>
+    </header>
+  
+    <section id="contenedorPuzzle">
+      <div id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        <img id="pieza3" src="https://1.bp.blogspot.com/-8LurPyhzlD4/USVEdAH-KJI/AAAAAAAAA54/INQRSWmH79k/s320/pieza3.jpg" alt="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="pieza2" src="https://1.bp.blogspot.com/-daD5d1V4ct4/USVEdAGqdDI/AAAAAAAAA50/XXo8rBlTGpQ/s320/pieza2.jpg" alt="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="pieza4" src="https://4.bp.blogspot.com/-2R3yc2Kggvo/USVEd9UUR5I/AAAAAAAAA6A/YBxpgYG15NI/s320/pieza4.jpg" alt="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+        <img id="pieza1" src="https://3.bp.blogspot.com/-gA3KvKhA-8w/USVEdAiWi6I/AAAAAAAAA58/btNKJqIkXHc/s320/pieza1.jpg" alt="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
       </div>
+      <div id="puzzle">
+        <div class="contenedorPieza" id="uno" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+        <div class="contenedorPieza" id="dos" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+        <div class="contenedorPieza" id="tres" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+        <div class="contenedorPieza" id="cuatro" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"></div>
+      </div>	
+    </section>
+    <script src="/assets/js/puzzle.js"></script>
     </div>
+    <script src="/assets/js/puzzle.js"></script>
   </body>
 </html>
