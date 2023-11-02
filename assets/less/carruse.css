@@ -1,98 +1,240 @@
-
-i {
-	position: relative;
-	display: block;
-	width: 500px;
-	height: 300px;
-	overflow: hidden;
-	border-radius: 5px;
+h1 {
+	font-size: 5.25vmin;
+	text-align: center;
+	color: rgb(0, 0, 0);
 }
 
-i:before, i:after {
-	content: '⥪';
-	position: absolute;
-	top: 50%;
-	left: 1rem;
-	z-index: 2;
-	width: 2rem;
-	height: 2rem;
-	background: dodgerblue;
-	color: white;
-	border-radius: 50%;
+p {
+	font-size: max(10pt, 2.5vmin);
+	line-height: 1.4;
+	color: #000000;
+	margin-bottom: 1.5rem;
+}
+
+.wrap {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 95%;
+	height: 25em;
+	padding-bottom: 10px;
+	border: 8px solid;
+	border-image: linear-gradient(-50deg, rgb(154, 143, 200), #710686, rgb(132, 61, 146), rgb(154, 143, 200), rgb(156, 15, 149), rgb(154, 143, 200), rgb(102, 0, 128)) 1;
+	transition: .3s ease-in-out;
+	position: relative;
+	overflow: hidden;
 }
 
-i:after {
-	content: '⥭';
-	left: auto;
-	right: 1rem;
-}
-
-/* I haven't found a way for IE and Edge to let me style inputs that way */
-input {
-	appearance: none;
-	-ms-appearance: none;
-	-webkit-appearance: none;
-	display: block;
+.overlay {
+	position: relative;
+	display: flex;
 	width: 100%;
 	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 5px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	transform: translateX(100%);
-	transition: transform ease-in-out 400ms;
+	padding: 1rem .75rem;
+	background: #5b8080;
+	transition: .4s ease-in-out;
 	z-index: 1;
 }
 
-input:focus {
-	outline: none;
+.overlay-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 15vmin;
+	height: 100%;
+	padding: .5rem 0 0 .5rem;
+	border: 3px solid;
+	border-image:
+		linear-gradient(to bottom,
+			#9e0470 5%,
+			rgb(128, 68, 120) 35% 65%,
+			#9e0470 95%) 0 0 0 100%;
+	transition: .3s ease-in-out .2s;
+	z-index: 1;
 }
 
-input:after {
-	content: attr(title);
+.image-content3 {
 	position: absolute;
-	top: 1rem;
-	left: 1rem;
-	background-color: rgba(0,0,0,0.4);
-	color: white;
-	padding: .5rem;
-	font-size: 1rem;
-	border-radius: 5px;
+	top: 0;
+	right: 0;
+	width: 100vmin;
+	height: 100%;
+	background-image: url("/assets/img/Animales/Animales/Anfibios/rana1.jpg");
+	background-size: cover;
+	transition: .3s ease-in-out;
+	/* border: 1px solid green; */
 }
 
-input:not(checked):before {
-	content: '';
+.image-content2 {
 	position: absolute;
-	width: 2rem;
-	height: 2rem;
-	border-radius: 50%;
-	top: 50%;
-	left: calc(-100% + 1rem);
+	top: 0;
+	right: 0;
+	width: 100vmin;
+	height: 100%;
+	background-image: url("/assets/img/Animales/Animales/Anfibios/anfibio1.jpg");
+	background-size: cover;
+	transition: .3s ease-in-out;
+	/* border: 1px solid green; */
 }
 
-input:checked:before {
-	display: none;
-	left: 1rem;
+.image-content4 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100vmin;
+	height: 100%;
+	background-image: url("/assets/img/Animales/Animales/Anfibios/salamandracomun.jpg");
+	background-size: cover;
+	transition: .3s ease-in-out;
+	/* border: 1px solid green; */
 }
 
-input:checked {
-	transform: translateX(0);
-	pointer-event: none;
-	z-index: 0;
-	box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+.inset {
+	width: 35%;
+	margin: 0.25em 1em 1em 0;
+	border-radius: 0.25em;
+	float: left;
 }
 
-input:checked + input:before {
-	left: -3rem;
+
+
+.text {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55vmin;
+	height: 100%;
+	padding: 3vmin 4vmin;
+	background: #fff;
+	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / .4);
+	overflow-y: scroll;
 }
 
-input:checked + input ~ input:before {
-	display: none;
+.wrap:hover .overlay {
+	transform: translateX(-60vmin);
+}
+
+.wrap:hover .image-content {
+	width: 30vmin;
+}
+
+.wrap:hover .overlay-content {
+	border: none;
+	transition-delay: .2s;
+	transform: translateX(60vmin);
+}
+
+.wrap:hover .dots {
+	transform: translateX(1rem);
+}
+
+.wrap:hover .dots .dot {
+	background: white;
+}
+
+
+/* Animations and timing delays */
+.animate {
+	animation-duration: 0.7s;
+	animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+	animation-fill-mode: backwards;
+}
+
+/* Pop In */
+.pop {
+	animation-name: pop;
+}
+
+@keyframes pop {
+	0% {
+		opacity: 0;
+		transform: scale(0.5, 0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+}
+
+/* Slide In */
+.slide {
+	animation-name: slide;
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		transform: translate(4em, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+/* Slide Left */
+.slide-left {
+	animation-name: slide-left;
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translate(-40px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+.slide-up {
+	animation-name: slide-up;
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.delay-1 {
+	animation-delay: 0.3s;
+}
+
+.delay-2 {
+	animation-delay: 0.6s;
+}
+
+.delay-3 {
+	animation-delay: 0.9s;
+}
+
+.delay-4 {
+	animation-delay: 1.2s;
+}
+
+.delay-5 {
+	animation-delay: 1.5s;
+}
+
+.delay-6 {
+	animation-delay: 1.8s;
+}
+
+.delay-7 {
+	animation-delay: 2.1s;
+}
+
+.delay-8 {
+	animation-delay: 2.4s;
 }
