@@ -21,6 +21,6 @@ track.addEventListener("ended", function () {
 
 function playAudio(letra) {
     var audio = document.getElementById('track');
-    audio.src = `../../../assets/Audios/Abecedario/${letra}.mp3`;
+    audio.src = `../assets/Audios/Abecedario/${letra}.mp3`;
     audio.play();
   }
