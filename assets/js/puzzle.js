@@ -1,12 +1,3 @@
-/*
-  Descripción: Rompecabezas con javascript, html y css, dificultad escalable por número de piezas.
-  Autor: Carlos Medina
-  https://www.facebook.com/xziolhvinvhgl
-  https://twitter.com/unaexpresion
-  https://plus.google.com/u/0/117195360288877972577/posts
-  Imagen tomada de: http://images6.fanpop.com/image/polls/1263000/1263106_1376304773845_full.jpg
-*/
-
 
 var select = false;
 var c = 'inc';
@@ -145,7 +136,7 @@ var rompecabezas = {
 		
     setTimeout(function(){
       if(fin){
-			  alert('LO RESOLVISTE COMPADRE!!')
+			  alert('Felicidades ganaste!!')
 		  }
     },600);
 	},

@@ -58,7 +58,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Anfibios/rana1.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Anfibios/rana1.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -69,7 +69,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Anfibios/anfibio1.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Anfibios/anfibio1.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -80,7 +80,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Anfibios/salamandracomun.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Anfibios/salamandracomun.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -91,7 +91,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Aves/Halcon.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Aves/Halcon.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -102,7 +102,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Aves/colibri.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Aves/colibri.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -113,7 +113,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Aves/tucan2.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Aves/tucan2.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 
@@ -125,7 +125,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Insectos/abeja.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Insectos/abeja.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -136,7 +136,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Insectos/mariposa2.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Insectos/mariposa2.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -147,7 +147,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Insectos/mariquita.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Insectos/mariquita.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -158,7 +158,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Mamiferos/Oso.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Mamiferos/Oso.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -169,7 +169,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Mamiferos/Elefantes.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Mamiferos/Elefantes.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -180,7 +180,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Mamiferos/hipopotamo.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Mamiferos/hipopotamo.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -191,7 +191,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Reptiles/cocodrilo.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Reptiles/cocodrilo.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -201,7 +201,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Reptiles/Serpiente.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Reptiles/Serpiente.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -212,7 +212,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Peces/medusa.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Peces/medusa.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -223,7 +223,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Peces/Pezbeta.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Peces/Pezbeta.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -233,7 +233,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Peces/pezpayaso.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Peces/pezpayaso.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }
@@ -243,7 +243,7 @@ p {
 	right: 0;
 	width: 100vmin;
 	height: 100%;
-	background-image: url("/assets/img/Animales/Animales/Reptiles/tortuga.jpg");
+	background-image: url("../../assets/img/Animales/Animales/Reptiles/tortuga.jpg");
 	background-size: cover;
 	transition: .3s ease-in-out;
 }

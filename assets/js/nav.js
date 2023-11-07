@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <link rel="shortcut icon" href="/assets/img/icono.ico">
     <li><a href="/index.html">Inicio</a></li>
     <li><a href="/Edades.html">Actividades</a></li>
-    <li><a href="/Lecturas/Lecturas.html">Lecturas</a></li>
+    <li><a href="Lecturas/Lecturas.html">Lecturas</a></li>
     <li><a href="/Soporte/Soporte.html">Soporte</a></li>
     </ul>
     `
