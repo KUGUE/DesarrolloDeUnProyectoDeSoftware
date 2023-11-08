@@ -1,17 +1,11 @@
-async function speech() {
-  var text = document.querySelector(".edadTitulo").textContent;
-  if (text !== "") {
-    voz.text = text;
-    window.speechSynthesis.speak(voz);
-  }
-}
+
 
 var voz = new SpeechSynthesisUtterance();
 voz.lang = "es-ES";
 voz.volume = 1;
 
 // Define el índice de la voz que deseas utilizar
-var voiceIndex = 4; // Este es el índice de "Google español" en el arreglo de voces
+var voiceIndex = 5; // Este es el índice de "Google español" en el arreglo de voces
 
 var timer = setInterval(function () {
   var voices = speechSynthesis.getVoices();

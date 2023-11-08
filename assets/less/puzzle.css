@@ -18,9 +18,9 @@ div#conf {
 }
 
 table {
-    border: 2px solid green;
-    box-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
-    -webkit-box-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    border: 2px solid rgb(20, 20, 20);
+    box-shadow: 1px 1px 8px #c421ec, -1px -1px 8px #b43ea4, 1px -1px 8px #264d5c, -1px 1px 8px #00e800;
+    -webkit-box-shadow: 1px 1px 8px #e423d4, -1px -1px 8px #640032, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
     border-collapse: collapse;
 }
 
@@ -47,5 +47,5 @@ div#titulo {
     color: #FFF;
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 1px 1px 8px #00e800, -1px -1px 8px #00e800, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    text-shadow: 1px 1px 8px #6d1c48, -1px -1px 8px #661c60, 1px -1px 8px #aa2b8f, -1px 1px 8px #b126aa;
 }
