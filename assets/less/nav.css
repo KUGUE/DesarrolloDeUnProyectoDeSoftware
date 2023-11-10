@@ -20,15 +20,11 @@
 
 li {
   
-  color: #03A9F4;
+  color: #20272b;
   font: 14pt "Roboto", sans-serif;
   align-items: center;
 }
 
-li {
-  width: 230px;
-  text-indent: 56px;
-}
 
 h3{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

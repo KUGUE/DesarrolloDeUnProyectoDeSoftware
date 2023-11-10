@@ -223,10 +223,16 @@ a {
     .categoriamedia {
         display: grid;
         grid-template-columns: 1fr;
-        /* Una columna para dispositivos móviles */
+
         gap: 10px;
         /* Espacio entre los cuadros */
     }
+
+    .modal-container{
+
+max-width: 100%;
+max-height: 100%;
+}
 
     .box {
         padding-top: 20px;
