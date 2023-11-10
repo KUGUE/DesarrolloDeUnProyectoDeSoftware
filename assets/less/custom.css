@@ -8,7 +8,7 @@
   z-index: 0;
 }
 
-.back img { 
+.back img {
   width: 8vw;
   height: 7vw;
 }
@@ -20,15 +20,16 @@
   right: 0;
   margin: 20px;
   color: #FF6B81;
-  font-size: 24px; 
+  font-size: 24px;
 }
+
 .next img {
   width: 8vw;
   height: 7vw;
 }
 
 /* SECCION PARA LECTURAS */
-.animales{
+.animales {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
@@ -44,65 +45,73 @@
   margin-bottom: 10px;
 }
 
-.animalestarjeta{
+.animalestarjeta {
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
   background-color: #e3fffb;
   margin-bottom: 15px;
-  
+
 }
-.banner img{
+
+.banner img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.animalestarjeta a{
-  
+
+.animalestarjeta a {
+
   text-decoration: none;
 }
+
 /* SECCION PALABRAS VOCALES */
 .card-title {
   margin-top: 80px;
   color: #FF6B81;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; 
-  text-stroke: 5px black; 
-  text-shadow: 5px 0 0 #e2052799; 
+  -webkit-text-stroke: 3px black;
+  text-stroke: 5px black;
+  text-shadow: 5px 0 0 #e2052799;
 }
-.E{
+
+.E {
   margin-top: 80px;
   color: #F79E60;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; 
-  text-stroke: 5px black; 
-  text-shadow: 5px 0 0 #AF5837; 
+  -webkit-text-stroke: 3px black;
+  text-stroke: 5px black;
+  text-shadow: 5px 0 0 #AF5837;
 }
-.I{
+
+.I {
   margin-top: 80px;
   color: #03CFC9;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; 
-  text-stroke: 5px black; 
-  text-shadow: 5px 0 0 #00CEC8; 
+  -webkit-text-stroke: 3px black;
+  text-stroke: 5px black;
+  text-shadow: 5px 0 0 #00CEC8;
 }
-.O{
+
+.O {
   margin-top: 80px;
   color: #FF83DC;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; 
-  text-stroke: 5px black; 
-  text-shadow: 5px 0 0 #FF60CF; 
+  -webkit-text-stroke: 3px black;
+  text-stroke: 5px black;
+  text-shadow: 5px 0 0 #FF60CF;
 }
-.U{
+
+.U {
   margin-top: 80px;
   color: #FBDF63;
   font-size: 60px;
-  -webkit-text-stroke: 3px black; 
-  text-stroke: 5px black; 
-  text-shadow: 5px 0 0 #F4AE22; 
+  -webkit-text-stroke: 3px black;
+  text-stroke: 5px black;
+  text-shadow: 5px 0 0 #F4AE22;
 }
+
 /* Estilos para el botón empezar*/
 .lead-button {
   display: inline-block;
@@ -205,7 +214,8 @@
 
 
 
-.content {
+.content,
+.content .distans {
   width: 80%;
   margin: auto;
   display: flex;
@@ -214,6 +224,10 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
+}
+
+.content .distans {
+  margin-top: 100px;
 }
 
 .vocal {
@@ -290,7 +304,9 @@ h2 {
   color: yellow;
   margin-bottom: 10px;
 }
-
+.boton{
+  margin-top: 40px;
+}
 .content .lead-button {
   display: block;
   margin: 0 auto;
@@ -389,7 +405,8 @@ h2 {
 }
 
 
-.edadTitulo,.resultado {
+.edadTitulo,
+.resultado {
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: 'Anton', sans-serif;
@@ -437,7 +454,11 @@ h2 {
 }
 
 
-.categoria , .categoriamedia, .categorianumeros, .categorianumeros2, .categoriaulti {
+.categoria,
+.categoriamedia,
+.categorianumeros,
+.categorianumeros2,
+.categoriaulti {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -540,11 +561,15 @@ body {
   margin-top: 0;
 }
 
-.categoria, .categoriaulti, .categoriamedia, .categoria .ubicacion {
+.categoria,
+.categoriaulti,
+.categoriamedia,
+.categoria .ubicacion {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
 .categoria .cuadro {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -557,7 +582,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.categorianumeros2 .escrito{
+
+.categorianumeros2 .escrito {
   background-color: #FFF;
 }
 
@@ -569,6 +595,7 @@ body {
   text-align: center;
   background-color: #e3fffb;
 }
+
 .tarjeta3 {
   width: 40%;
   border: 1px solid #ddd;
@@ -619,11 +646,13 @@ body {
   font-weight: bold;
   font-family: 'Arial', sans-serif;
 }
+
 .numero p {
   font-size: 80px;
   margin: 10px 10px 10px 10px;
 }
-.escrito{
+
+.escrito {
   min-width: 100px;
   font-size: 40px;
   color: #2e0000;
@@ -633,9 +662,10 @@ body {
   text-align: center;
   font-weight: bold;
   font-family: 'Arial', sans-serif;
-  
+
 }
-.tarjeta .escrito{
+
+.tarjeta .escrito {
   background-color: #e3fffb;
 }
 
@@ -715,22 +745,25 @@ body {
   background-color: #c6caf8;
   transform: scale(1.1);
 }
-.ubicacion .tarjeta{
+
+.ubicacion .tarjeta {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
 }
-.imagen2{
+
+.imagen2 {
   align-self: flex-end;
 }
-.imagen2 img{
-max-width: 90px;
-max-height: 90px;
+
+.imagen2 img {
+  max-width: 90px;
+  max-height: 90px;
 }
 
 .ubicacion .imagen-container {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   max-width: 100%;
   background-color: #b1cde0;
@@ -738,11 +771,12 @@ max-height: 90px;
   padding: 10px;
 }
 
-.categorianumeros2 .tarjeta{
-  
+.categorianumeros2 .tarjeta {
+
   width: 80%;
   height: 100%;
 }
+
 .escritura input {
   width: 90%;
   height: 40px;
@@ -752,17 +786,15 @@ max-height: 90px;
   padding: 5px;
 }
 
-.texto-personalizado {
-  position: absolute;
-  left: 100%; 
-  top: 0;
-  font-size: 1.2em;
-  color: blue;
-  border: 2px solid red;
-  padding: 5px;
-  display: none; 
+.texto-fijo {
+  width: 80%;
+  height: 80px;
+  resize: none;
+  text-align: center;
+  font-size: 60px;
 }
-.categorianumeros .tarjeta{
+
+.categorianumeros .tarjeta {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -771,30 +803,32 @@ max-height: 90px;
 /* boton de sumas */
 /* Estilos del botón */
 button#calcularButton {
-  background-color: #cca3fa;
+  width: 25vh;
+  height: 6vh;
+  background-color: #a85cff;
   color: #000000;
-  margin: 20px 20px 20px 20px;
+  margin: 15px 20px 15px 20px;
   padding: 10px 20px;
   border: none;
-  border-radius: 25px; 
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 18px; 
-  text-transform: uppercase; 
-  transition: background-color 0.3s, transform 0.1s; 
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
 button#calcularButton:active {
-  transform: scale(0.95); 
-  background-color: #c1a1f3; 
+  transform: scale(0.95);
+  background-color: #c1a1f3;
 }
 
 
 .resultado {
   border-radius: 10%;
-  padding: 5px; 
+  padding: 5px;
 }
 
-input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
@@ -802,22 +836,40 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-  padding: 5px; 
+  padding: 5px;
   border: 1px solid #cccccc;
   border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
   h1.edadTitulo {
-      font-size: 50px;
+    font-size: 50px;
   }
-  h3.card-title{ 
+
+  h3.card-title {
     font-size: 40px;
   }
-  
+
+  .content .distans {
+    margin-top: 15px;
+  }
+
+  .content .distans h1 {
+    font-size: 50px;
+  }
+
+  .content .distans h2 {
+    font-size: 30px;
+  }
+.boton{
+  margin-top: 50px;
+}
 
 
-  .categoriamedia, .categoria, .categoria .ubicacion,.categoriaulti  {
+  .categoriamedia,
+  .categoria,
+  .categoria .ubicacion,
+  .categoriaulti {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
@@ -836,19 +888,5 @@ input[type="number"] {
     -webkit-text-stroke: 2px #615789;
     font-family: 'Anton', sans-serif;
   }
-  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

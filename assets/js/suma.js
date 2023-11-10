@@ -4,16 +4,16 @@ let numeroAleatorio2 = 0;
 
 const numero = (option) => {
   let obj = {
-      1: "5",
-      2: "10",
-      3: "",
-      4: "4",
-      5: "5",
-      6: "6",
-      7: "7",
-      8: "8",
-      9: "9",
-      10: "10"
+    1: 1,
+    2: 101,
+    3: 201,
+    4: 301,
+    5: 401,
+    6: 501,
+    7: 601,
+    8: 701,
+    9: 801,
+    10: 901
   }
   return obj[option] ?? "Unknown"
 }
@@ -28,8 +28,9 @@ miInput.addEventListener("focus", function () {
 function generarNumerosAleatorios() {
   if (idAlmacenado) {
     console.log("ID almacenado:", idAlmacenado);
-    numeroAleatorio1 = Math.floor(Math.random() * numero(idAlmacenado)) + 5;
-    numeroAleatorio2 = Math.floor(Math.random() * numero(idAlmacenado)) + 5;
+
+    numeroAleatorio1 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
+    numeroAleatorio2 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
   } 
   document.getElementById("escribir").textContent = numeroAleatorio1;
   document.getElementById("escribir2").textContent = numeroAleatorio2;
@@ -48,10 +49,10 @@ botonCalcular.addEventListener("click", function () {
   if (valorInput === sumaAleatoria) {
     resultadoH1.textContent = "Correcto";
     resultadoH1.style.backgroundColor = "#adff98";
-
     setTimeout(function () {
       resultadoH1.textContent = "resultado";
       resultadoH1.style.backgroundColor = "transparent";
+      miInput.value = "";
       sumaAleatoria = generarNumerosAleatorios();
     }, 2000);
   } else {
@@ -60,5 +61,16 @@ botonCalcular.addEventListener("click", function () {
   }
 }
 );
-// Otro archivo JS o en el mismo donde necesitas recuperar el ID
+// evita que se pongan letras :)
 
+document.getElementById("miInput").addEventListener("input", function(e) {
+  let entrada = e.target.value;
+  e.target.value = entrada.replace(/\D/g, ''); 
+});
+
+// activar boton con enter
+document.getElementById("miInput").addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    document.getElementById("calcularButton").click();
+  }
+});
