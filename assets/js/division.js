@@ -28,9 +28,10 @@ miInput.addEventListener("focus", function () {
 function generarNumerosAleatorios() {
   if (idAlmacenado) {
     console.log("ID almacenado:", idAlmacenado);
-
+    do {
     numeroAleatorio1 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
     numeroAleatorio2 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
+  } while (numeroAleatorio1 % 2 !== 0 || numeroAleatorio2 % 2 !== 0 || numeroAleatorio1 % numeroAleatorio2 !== 0);
   } 
   document.getElementById("escribir").textContent = numeroAleatorio1;
   document.getElementById("escribir2").textContent = numeroAleatorio2;
