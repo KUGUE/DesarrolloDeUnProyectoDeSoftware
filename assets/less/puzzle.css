@@ -1,9 +1,3 @@
-body {
-    background: #222;
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica;
-}
 
 span {
     color: #FFF;
@@ -17,13 +11,35 @@ div#conf {
     padding-bottom: 10px;
 }
 
+
 table {
     border: 2px solid rgb(20, 20, 20);
-    box-shadow: 1px 1px 8px #c421ec, -1px -1px 8px #b43ea4, 1px -1px 8px #264d5c, -1px 1px 8px #00e800;
-    -webkit-box-shadow: 1px 1px 8px #e423d4, -1px -1px 8px #640032, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    box-shadow: 1px 1px 8px #c421ec, -1px -1px 8px #b43ea4, 1px -1px 8px #264d5c, -1px 1px 8px #ff1f1f;
+    -webkit-box-shadow: 1px 1px 8px #e423d4, -1px -1px 8px #860a72, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
     border-collapse: collapse;
 }
+/* Agrega estas reglas CSS al final de tu archivo de estilo */
 
+.puzzle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .correcto {
+    box-shadow: 1px 1px 8px #c421ec, -1px -1px 8px #b43ea4, 1px -1px 8px #264d5c, -1px 1px 8px #00e800;
+    -webkit-box-shadow: 1px 1px 8px #e423d4, -1px -1px 8px #860a72, 1px -1px 8px #00e800, -1px 1px 8px #00e800;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .puzzle-info {
+    color: #FFF;
+    flex: 1;
+  }
+
+  
 td.pieza {
     background: url(../../assets/img/puzzle.jpg);
     transition: .3s ease-in-out;
@@ -37,7 +53,7 @@ td.pieza {
 
 div.posic {
     background: #FFF;
-    border: 1px solid #700000;
+    border: 1px solid #a50e66;
     width: 150px;
     display: none;
 
@@ -47,5 +63,5 @@ div#titulo {
     color: #FFF;
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 1px 1px 8px #6d1c48, -1px -1px 8px #661c60, 1px -1px 8px #aa2b8f, -1px 1px 8px #b126aa;
+    text-shadow: 1px 1px 8px #fa0ae6, -1px -1px 8px #661c60, 1px -1px 8px #aa2b8f, -1px 1px 8px #b126aa;
 }
