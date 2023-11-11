@@ -25,14 +25,6 @@ botonDer.addEventListener("click", function () {
   }
 });
 
-// lector de numeros
-async function speech() {
-  var text = document.querySelector(".edadTitulo").textContent;
-  if (text !== "") {
-    voz.text = text;
-    window.speechSynthesis.speak(voz);
-  }
-}
 
 var voz = new SpeechSynthesisUtterance();
 voz.lang = "es-ES";
