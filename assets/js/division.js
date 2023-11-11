@@ -4,16 +4,16 @@ let numeroAleatorio2 = 0;
 
 const numero = (option) => {
   let obj = {
-    1: 1,
-    2: 101,
-    3: 201,
-    4: 301,
-    5: 401,
-    6: 501,
-    7: 601,
-    8: 701,
-    9: 801,
-    10: 901
+    1: 50,
+    2: 40,
+    3: 50,
+    4: 60,
+    5: 70,
+    6: 80,
+    7: 90,
+    8: 100,
+    9: 120,
+    10: 130
   }
   return obj[option] ?? "Unknown"
 }
@@ -29,9 +29,9 @@ function generarNumerosAleatorios() {
   if (idAlmacenado) {
     console.log("ID almacenado:", idAlmacenado);
     do {
-    numeroAleatorio1 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
-    numeroAleatorio2 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
-  } while (numeroAleatorio1 % 2 !== 0 || numeroAleatorio2 % 2 !== 0 || numeroAleatorio1 % numeroAleatorio2 !== 0);
+    numeroAleatorio1 = Math.floor(Math.random() * numero(idAlmacenado)) + 1;
+    numeroAleatorio2 = Math.floor(Math.random() * numero(idAlmacenado)) + 1;
+  } while (numeroAleatorio1 % 2 !== 0 || numeroAleatorio2 % 2 !== 0 || numeroAleatorio1 % numeroAleatorio2 !== 0 || numeroAleatorio1 / numeroAleatorio2 == 1);
   } 
   document.getElementById("escribir").textContent = numeroAleatorio1;
   document.getElementById("escribir2").textContent = numeroAleatorio2;

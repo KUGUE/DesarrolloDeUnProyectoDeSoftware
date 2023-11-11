@@ -34,6 +34,7 @@ function generarNumerosAleatorios() {
   } 
   document.getElementById("escribir").textContent = numeroAleatorio1;
   document.getElementById("escribir2").textContent = numeroAleatorio2;
+  console.log(numeroAleatorio1 - numeroAleatorio2);
   return numeroAleatorio1 - numeroAleatorio2;
 }
 
@@ -65,7 +66,7 @@ botonCalcular.addEventListener("click", function () {
 
 document.getElementById("miInput").addEventListener("input", function(e) {
   let entrada = e.target.value;
-  e.target.value = entrada.replace(/\D/g, ''); 
+  e.target.value = entrada.replace(/[^-0-9]/g, '');
 });
 
 // activar boton con enter
