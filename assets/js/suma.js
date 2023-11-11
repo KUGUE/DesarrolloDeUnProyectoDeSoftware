@@ -13,7 +13,7 @@ const numero = (option) => {
     7: 601,
     8: 701,
     9: 801,
-    10: 901
+    10: 900
   }
   return obj[option] ?? "Unknown"
 }
