@@ -1,5 +1,5 @@
 /* Controls/Logic */
-label,
+ label,
 input {
     position: absolute;
     top: -10vmin;
@@ -10,8 +10,12 @@ input {
     height: 52.5vmin;
     cursor: pointer;
     opacity: 0;
+
     pointer-events: none;
     -webkit-tap-highlight-color: transparent;
+}
+.burger{
+    opacity: 100;
 }
 input:nth-child(6n + 2),
 input:checked + input + input + label {
@@ -289,7 +293,7 @@ form {
 }
 
 button {
-    margin: 7.5vmin auto;
+    margin: 2vmin auto;
     border: none;
     border-radius: 1vmin;
     width: 35vmin;

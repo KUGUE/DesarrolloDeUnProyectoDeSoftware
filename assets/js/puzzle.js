@@ -157,3 +157,8 @@ window.onload = function(){
       rompecabezas._barajar();
     }
 }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var modalLink = document.querySelector('.button');
+    modalLink.click();
+  });
