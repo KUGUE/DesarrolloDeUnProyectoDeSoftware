@@ -316,9 +316,9 @@ $(document).ready(function () {
             "AnsweredQue": ""
         },
         {
-            "title": "¿Qué animal es conocido por tener rayas negras y blancas y vive en la selva?",
+            "title": "¿Qué animal es conocido por tener rayas negras y blancas y vive en la sabana?",
             "choices": [
-                " León",
+                "León",
                 "Cebra",
                 "Elefante",
                 "Oso"
@@ -500,7 +500,13 @@ $(document).ready(function () {
         radioButtons = $("input:radio[name='option']");
         if (questionnumber < randomnumarr.length) {
             indexpre = randomnumarr[questionnumber];
-            index = quiz[indexpre]
+            index = quiz[indexpre];
+
+            // Verificar si 'index' es válido y tiene 'correctAnswer'
+            if (index && typeof index.correctAnswer !== 'undefined') {
+                saveRadioBtnValue();
+            }
+
             $(".que_text").text(index.title);
             $("label").eq(0).text(index.choices[0]);
             $("label").eq(1).text(index.choices[1]);
@@ -582,25 +588,33 @@ $(document).ready(function () {
     };
     let radioBtnCheckedVal;
     function saveRadioBtnValue() {
+        console.log("Saving radio button value for question", questionnumber);
         $("input:radio[name='option']").each(function (i) {
             if ($(this).is(':checked')) {
                 var idVal = $(this).attr("id");
                 radioBtnCheckedVal = $("label[for='" + idVal + "']").text();
+                console.log("radioBtnChecked:", radioBtnCheckedVal);
                 return false;
-            }
-            else {
+            } else {
                 radioBtnCheckedVal = " "
+            }
+            if (typeof radioBtnChecked !== 'undefined') {
+                quiz[questionnumber].userAnswer = radioBtnChecked;
+                console.log("Saved radio button value: " + radioBtnChecked);
             }
         });
         var userAns = radioBtnCheckedVal;
         radioBtnChecked[questionnumber] = userAns;
+        console.log("Saved radio button value:", userAns);
     }
     function showquestionnum() {
         $(".QNO").text(questionnumber + 1 + " ");
     }
 
     $(".backk").click(function () {
-        if (questionnumber < 20 && questionnumber >= 1) {
+
+
+        if (questionnumber <= 19 && questionnumber >= 1) {
             $(".result").hide();
             $(".next").show();
             $(".skip").removeClass('disable');
@@ -631,11 +645,16 @@ $(document).ready(function () {
 
 
     $(".next, .skip").click(function () {
-        if (questionnumber < 19) {
+
+        if (questionnumber <= 19) {
             $("#marquee").remove();
             clearInterval(secondSetInterval);
+            console.log("Question number:", questionnumber);
+            console.log("Saving radio button value...");
             saveRadioBtnValue();
+            console.log("Incrementing question number...");
             questionnumber++;
+            console.log("New question number:", questionnumber);
             showquestionnum();
             showquestion();
             diablingButtons();
@@ -654,29 +673,51 @@ $(document).ready(function () {
             }
         }
         if (questionnumber == 19) {
-            $(".skip").addClass('disable');
+            $(".skip").hide();
             $(".next").hide();
-            $(".result").show();
+            $(".questionbody").remove();
+            $(".resultbody").fadeIn();
+            clearInterval(totalSetInterval);
+            checkResults();
+            gettingPerc();
+            gettingPercTime();
+            $(".percentage").text(`${perc1}%`);
+            $(".skip-ans-given").text(SA);
+            $(".wrong-ans-given").text(WA - 1);
+            $(".Correct-ans-given").text(CA);
         }
     });
     let CA = 0;
     let SA = 0;
     let WA = 0;
+    let correctAnswers = [];
+    let incorrectAnswers = [];
+
     function checkResults() {
+        CA = 0;
+        correctAnswers = [];
+        incorrectAnswers = [];
+
         for (let i = 0; i < randomnumarr.length; i++) {
             let indexpre = randomnumarr[i];
             let index = quiz[indexpre];
+
             if (radioBtnChecked[i] == index.choices[index.correctAnswer]) {
                 CA++;
-            }
-            else if (radioBtnChecked[i] == " ") {
+                correctAnswers.push(index.title);
+            } else if (radioBtnChecked[i] == " ") {
                 SA++;
-            }
-            else {
+            } else {
                 WA++;
+                incorrectAnswers.push({
+                    question: index.title,
+                    userAnswer: radioBtnChecked[i],
+                    correctAnswer: index.choices[index.correctAnswer]
+                });
             }
         }
     }
+
 
     let width1 = 0;
     let perc1 = 0;
@@ -704,7 +745,6 @@ $(document).ready(function () {
 
 
 
-
     $(".result").click(function () {
         $(".questionbody").remove();
         $(".resultbody").fadeIn();
@@ -717,8 +757,25 @@ $(document).ready(function () {
         $(".skip-ans-given").text(SA);
         $(".wrong-ans-given").text(WA);
         $(".Correct-ans-given").text(CA);
+
+        // Muestra las respuestas correctas e incorrectas
+        let correctAnswersList = $("#correct-answers-list");
+        let incorrectAnswersList = $("#incorrect-answers-list");
+
+        correctAnswersList.empty();
+        incorrectAnswersList.empty();
+
+        correctAnswers.forEach(answer => {
+            correctAnswersList.append(`<li>${answer}</li>`);
+        });
+
+        incorrectAnswers.forEach(answer => {
+            incorrectAnswersList.append(`<li>${answer.question} - Tu respuesta: ${answer.userAnswer}, Respuesta correcta: ${answer.correctAnswer}</li>`);
+        });
+
         $(".time").text(totaltime);
     });
+
     // adding the functionalities to buttons ends
     $(".icons i").click(function () {
         $(this).siblings().css(
