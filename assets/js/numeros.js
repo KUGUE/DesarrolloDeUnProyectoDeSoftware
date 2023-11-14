@@ -115,7 +115,7 @@ function convertirNumeroEnPalabras(numero) {
   const centenas = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
   const millares = ['', 'mil', 'dos mil', 'tres mil', 'cuatro mil', 'cinco mil', 'seis mil', 'siete mil', 'ocho mil', 'nueve mil'];
 
-  if (numero === 0) {
+  if (numero == 0) {
     return 'cero';
   }
 

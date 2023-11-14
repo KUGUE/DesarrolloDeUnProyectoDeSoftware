@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,30 +11,33 @@
   <link rel="stylesheet" type="text/css" href="../assets/less/custom.css" />
   <link rel="stylesheet" type="text/css" href="../assets/less/nav.css" />
   <script src="../assets/js/nav.js"></script>
-  </head>
-  
-  <body class="edades">
-      <div class="content">
-        <div id="picbox">
-            <span id="boxbuttons">
-              <span class="button">
-                <span id="counter">0</span>
-                Clicks
-              </span>
-              <span class="button">
-                <span onclick="ResetGame();">reiniciar</span>
-              </span> 
-            </span>
-            <div id="boxcard"></div>
-          </div>
-
-          <div class="back">
-            <a href="../Edades.html">
-                <img src="../assets/img/back.png" alt="">
-                </a>
-            </div>
-  </body>
-  </html>
-
-
 </head>
+
+<body class="edades">
+  <div class="content">
+    <div id="picbox">
+      <span id="boxbuttons">
+        <span class="button">
+          <span id="counter">0</span>
+          Clicks
+        </span>
+        <span class="button">
+          <span onclick="ResetGame();">reiniciar</span>
+        </span>
+        <!-- Agrega el botón que estará oculto inicialmente -->
+        <span id="nextLevelButton" style="display: none;" class="button">
+          <span onclick="NextGame();">Siguiente Nivel</span>
+        </span>
+      </span>
+      <div id="boxcard"></div>
+    </div>
+
+    <div class="back">
+      <a href="../Edades.html">
+        <img src="../assets/img/back.png" alt="">
+      </a>
+    </div>
+  </div>
+</body>
+
+

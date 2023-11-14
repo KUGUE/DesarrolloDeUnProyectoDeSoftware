@@ -19,10 +19,9 @@
 
     <div class="categorianumeros">
       <div class="tarjeta-pequena">
-        <div class="izq boton">
-          <p>
-            < </p>
-        </div>
+        <button class="izq boton pulsar">
+          <p>&lt;</p>
+        </button>
       </div>
       <div class="tarjeta" onclick="speechh(document.getElementById('numeroDisplay').textContent)">
         <div class="numero">
@@ -30,13 +29,14 @@
         </div>
       </div>
       <div class="tarjeta-pequena">
-        <div class="der boton">
-          <p>></p>
-        </div>
+        <button class="der boton">
+          <p>&gt;</p>
+        </button>
       </div>
     </div>
+    
     <div class="categorianumeros2" style="margin-top: 50px;">
-      <div class="tarjeta">
+      <div class="tarjeta-numeros">
         <div class="escrito">
           <p id="numeroEscrito">cero</p>
         </div>

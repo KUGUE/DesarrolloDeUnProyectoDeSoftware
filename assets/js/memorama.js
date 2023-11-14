@@ -90,8 +90,8 @@ function OpenCard() {
 					ImgOpened = "";
 				}, 400);
 			} else {
-				$("#" + id + " img").parent().css("visibility", "hidden");
-				$("#" + BoxOpened + " img").parent().css("visibility", "hidden");
+				$("#" + id + " img").parent().css("visibility", "none");
+				$("#" + BoxOpened + " img").parent().css("visibility", "none");
 				ImgFound++;
 				BoxOpened = "";
 				ImgOpened = "";
@@ -103,26 +103,59 @@ function OpenCard() {
 		Counter++;
 		$("#counter").html("" + Counter);
 
-		if (ImgFound == ImgSource.length) {
-			$("#counter").prepend('<span id="success">Encontraste todas las fotos con</span>');
-		}
+		if (ImgFound == currentCardCount) {
+			$("#counter").prepend('<span id="success">Encontraste todas las fotos con </span>');
+			// Hacer visible el botón
+			$("#nextLevelButton").show();
+		  }
 	}
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    for (var y = 1; y < 3; y++) {
-        ImgSource.forEach(function(val, i) {
-            var newDiv = document.createElement("div");
-            newDiv.id = "card" + y + i;
-            newDiv.innerHTML = "<img src='" + val + "' />";
-            document.querySelector(Source).appendChild(newDiv);
-        });
-    }
-
-    var cardDivs = document.querySelectorAll(Source + " div");
-    cardDivs.forEach(function(div) {
-        div.addEventListener("click", OpenCard);
-    });
-
-    ShuffleImages();
-});
+// ... (tu código existente)
+var currentCardCount = 4;
+document.addEventListener("DOMContentLoaded", function () {
+	for (var y = 1; y < 3; y++) {
+	  // Cambia el bucle forEach para que solo recorra las primeras 4 imágenes
+	  for (var i = 0; i < currentCardCount; i++) {
+		var newDiv = document.createElement("div");
+		newDiv.id = "card" + y + i;
+		newDiv.innerHTML = "<img src='" + ImgSource[i] + "' />";
+		document.querySelector(Source).appendChild(newDiv);
+	  }
+	}
+  
+	var cardDivs = document.querySelectorAll(Source + " div");
+	cardDivs.forEach(function (div) {
+	  div.addEventListener("click", OpenCard);
+	});
+  
+	ShuffleImages();
+  });
+  function NextGame() {
+	$("#nextLevelButton").hide();
+	currentCardCount += 4; // Aumenta el número de cartas en 4
+	if (currentCardCount <= ImgSource.length) {
+	  $(Source).empty();
+  
+	  for (var y = 1; y < 3; y++) {
+		for (var i = 0; i < currentCardCount; i++) {
+		  var newDiv = document.createElement("div");
+		  newDiv.id = "card" + y + i;
+		  newDiv.innerHTML = "<img src='" + ImgSource[i % ImgSource.length] + "' />";
+		  document.querySelector(Source).appendChild(newDiv);
+		}
+	  }
+  
+	  var cardDivs = document.querySelectorAll(Source + " div");
+	  cardDivs.forEach(function (div) {
+		div.addEventListener("click", OpenCard);
+	  });
+  
+	  ShuffleImages();
+	  ResetGame();
+	} else {
+	  alert("¡Felicidades! Has completado todos los niveles.");
+	}
+  }
+  
+  
