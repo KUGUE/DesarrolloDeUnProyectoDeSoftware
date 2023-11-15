@@ -1,4 +1,3 @@
-
 var movesNum;
 var movescell = document.getElementById("movesnum");
 
@@ -72,8 +71,26 @@ var solvePuzzle = function () {
 
     // Verifica la victoria al iniciar la resolución del rompecabezas.
     if (checkWin()) {
-        alert("¡Has ganado!");
+        setTimeout(function() {
+            Swal.fire({
+                title: "Sigue practicando",
+                width: 1000,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(/assets/img/alerts/confeti.gif)",
+                showCancelButton: true,
+                confirmButtonText: "Ver resultado",
+                cancelButtonText: "Reiniciar", 
+            }).then((result) => {
+                if (!result.isConfirmed) {
+                    randomizePuzzle();
+                } else {
+                    
+                }
+            });
+        }, 1000); 
     }
+    
 }
 var moveTile = function () {
     thisRow = this.style.gridRow.charAt(0);
@@ -97,13 +114,27 @@ var moveTile = function () {
     }
     movescell.innerHTML = movesNum;
 
-    // Espera 5 segundos antes de verificar la victoria.
-    setTimeout(function () {
-        if (checkWin()) {
-            // Si el jugador ha ganado, muestra un mensaje de victoria.
-            alert("¡Has ganado!");
-        }
-    }, 1000); // 5000 milisegundos (5 segundos)
+    if (checkWin()) {
+        setTimeout(function() {
+            Swal.fire({
+                title: "Felicidades lo lograste",
+                width: 1000,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(/assets/img/alerts/confeti.gif)",
+                showCancelButton: true,
+                confirmButtonText: "Ver resultado",
+                cancelButtonText: "Reiniciar", 
+            }).then((result) => {
+                if (!result.isConfirmed) {
+                    randomizePuzzle();
+                } else {
+                    
+                }
+            });
+        }, 1000); 
+    }
+
 }
 
 

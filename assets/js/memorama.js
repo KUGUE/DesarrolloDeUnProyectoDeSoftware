@@ -2,9 +2,9 @@ var BoxOpened = "";
 var ImgOpened = "";
 var Counter = 0;
 var ImgFound = 0;
-
+var currentCardCount = 4;
 var Source = "#boxcard";
-
+let initialCardSize = 400;
 var ImgSource = [
 
 	"/assets/img/Memorama/abeja.png",
@@ -102,17 +102,32 @@ function OpenCard() {
 		}
 		Counter++;
 		$("#counter").html("" + Counter);
-
 		if (ImgFound == currentCardCount) {
-			$("#counter").prepend('<span id="success">Encontraste todas las fotos con </span>');
-			// Hacer visible el botón
-			$("#nextLevelButton").show();
-		  }
+			setTimeout(function() {
+				Swal.fire({
+					title: "Felicidades lo lograste",
+					width: 1000,
+					padding: "3em",
+					color: "#716add",
+					background: "#fff url(/assets/img/alerts/confeti.gif)",
+					showCancelButton: true,
+					confirmButtonText: "Salir",
+					cancelButtonText: "Siguiente Nivel", 
+				}).then((result) => {
+					if (!result.isConfirmed) {
+						NextGame();
+					} else {
+						window.location.href = '../Edades/6-8.html';
+					}
+				});
+			}, 1000); 
+		}
+		
 	}
 }
 
 // ... (tu código existente)
-var currentCardCount = 4;
+
 document.addEventListener("DOMContentLoaded", function () {
 	for (var y = 1; y < 3; y++) {
 	  // Cambia el bucle forEach para que solo recorra las primeras 4 imágenes
@@ -131,8 +146,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
 	ShuffleImages();
   });
+  function ResizeCards(cardSize) {
+	$("#boxcard div").css({
+	  width: cardSize-200 + "px",
+	  height: cardSize-200 + "px",
+	});
+	initialCardSize==cardSize;
+  }
+  
   function NextGame() {
-	$("#nextLevelButton").hide();
 	currentCardCount += 4; // Aumenta el número de cartas en 4
 	if (currentCardCount <= ImgSource.length) {
 	  $(Source).empty();
@@ -141,10 +163,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		for (var i = 0; i < currentCardCount; i++) {
 		  var newDiv = document.createElement("div");
 		  newDiv.id = "card" + y + i;
-		  newDiv.innerHTML = "<img src='" + ImgSource[i % ImgSource.length] + "' />";
+		  newDiv.innerHTML =
+			"<img src='" +
+			ImgSource[i % ImgSource.length] +
+			"' />";
 		  document.querySelector(Source).appendChild(newDiv);
 		}
 	  }
+  
+	  ResizeCards(initialCardSize);
   
 	  var cardDivs = document.querySelectorAll(Source + " div");
 	  cardDivs.forEach(function (div) {
@@ -158,4 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
   }
   
+  function AdjustCardSize() {
+	var cardSize = carinitialCardSizedSize - 50; // Ajusta el tamaño inversamente proporcional al número de cartas
+	ResizeCards(cardSize);
+  }
   

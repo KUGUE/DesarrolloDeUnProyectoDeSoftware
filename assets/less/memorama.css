@@ -28,18 +28,18 @@ body {
 #boxcard {
     z-index: 1;
     margin: 10px 0 0;
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 10px;
     justify-content: center;
 }
+
 #boxcard div{
 	float: left;
 	width: 250px;
 	height: 250px;
 	margin: 5px;
 	padding: 5px;
-	border: 4px solid rgb(255, 255, 68);
+	border: 4px solid rgb(109, 109, 109);
 	cursor: pointer;
 	border-radius: 10px;
 	box-shadow: 0 1px 5px rgba(0,0,0,.5);
