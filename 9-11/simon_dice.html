@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Simon Game</title>
+    <title>Simon Dice</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Simon game.css" rel="stylesheet">
@@ -10,26 +10,33 @@
     <link rel="stylesheet" type="text/css" href="../assets/less/custom.css" />
     <link rel="stylesheet" type="text/css" href="../assets/less/simon_dice.css" />
     <link rel="stylesheet" type="text/css" href="../assets/less/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/less/modal2.css">
     <script src="../assets/js/nav.js"></script>
     <link rel="shortcut icon" href="/assets/img/icono.ico"> 
-    
 </head>
+<div class="some-text">
+  <a class="button" href="#popup"></a>
+</div>
+
+<div class="popup" id="popup">
+  <div class="popup__content">
+      <h3 class="heading-tertiary">Instrucciones</h3>
+      <p class="popup__text">
+    Selecciona los circulos azules que veas en pantalla
+      </p>
+      <a href="#" class="close" onclick="reiniciar()">Aceptar</a>
+  </div>
+</div>
 <body class="edades">
   <h2 class="edadTitulo"> Simon Dice</h2>
-  <h4 class="subtitulos">Debemos recordar la secuencia de ciruclos azules y <br>
-  hacer clic repitiendo la secuancia</h4>
-  <div class="content">
-    <div class="contenedorsimon">
       <div class="contenedor">
       <div class="juego"></div> 
-    </div> 
   </div> 
-</div> 
-<button id="reiniciar juego" onclick="reiniciar()">reiniciar</button>
-    <div class="back">
-      <a href="../Edades/9-11.html">
-          <img src="../assets/img/back.png" alt="">
-          </a>
-      </div>
+  <button id="reiniciar juego" onclick="reiniciar()">reiniciar</button>
+  <div class="back">
+    <a href="../Edades/9-11.html">
+        <img src="../assets/img/back.png" alt="">
+        </a>
+    </div>
 </body>
 </html>

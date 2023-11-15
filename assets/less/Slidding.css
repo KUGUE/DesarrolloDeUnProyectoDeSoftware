@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 @media screen and (max-width: 600px) {
   html {
@@ -21,9 +21,10 @@ ol, ul {
 	list-style: none;
 }
 .SlidingPuzzle {
-  max-width: 95%;
-  width: 13rem;
-  background: #000;
+  max-width: 100%;
+
+  background: #313033;
+  border: 3px solid black;
   border-radius: 0.3rem;
   padding: 0.5rem;
   display: grid;
@@ -33,7 +34,7 @@ ol, ul {
 }
 
 .SlidingPuzzle li{
-font-size: 30px;
+  font-size: 70px;
 }
 
 .Tile {
@@ -69,10 +70,11 @@ section {
 .moves {
   font-size: 0.8rem;
   margin: 1rem 0.5rem 1rem 1rem;
-  background: #3e9dd6;
+  background: #313033;
   padding: 0.6rem 0.8rem;
   color: #fff;
   border-radius: 0.3rem;
+  border: 2px solid black;
   white-space: nowrap;
 }
 #movesnum {
@@ -83,15 +85,31 @@ section {
   font-weight: bold;
 }
 button {
+  cursor: pointer;
   font-size: 0.8rem;
   margin: 0.5rem;
   padding: 0.5rem 0.8rem;
-  color: #333;
+  color: #ffffff;
+  background-color: #313033;
   border-radius: 0.3rem;
+  border: 2px solid black;
   white-space: nowrap;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 600px) {
   section { flex-direction: column; }
-  .moves { margin: 1rem 0 0.5rem 0; }
+
+
+  .SlidingPuzzle li{
+    font-size: 30px;
+  }
+  
+  button{
+    font-size: 20px;
+  }
+
+  .moves{
+    font-size: 20px;
+  }
 }

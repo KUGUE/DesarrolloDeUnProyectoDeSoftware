@@ -1,3 +1,5 @@
+
+
 @keyframes checked-anim {
   50% {
     width: 3000px;
@@ -26,10 +28,6 @@ li {
 }
 
 
-h3{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
 
 html,
 body {
@@ -44,8 +42,8 @@ body {
 #burger:before,
 #burger:after {
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 15px;
+  left: 15px;
   background: #03A9F4;
   width: 30px;
   height: 5px;
@@ -136,4 +134,25 @@ a {
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #303030;
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    transition: .1s;
+    z-index: 4;
+  }
 }

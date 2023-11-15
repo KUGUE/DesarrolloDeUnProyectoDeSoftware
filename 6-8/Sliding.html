@@ -8,16 +8,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="/assets/less/custom.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/less/custom.css" />
   <link rel="stylesheet" type="text/css" href="../assets/less/Slidding.css" />
-  <link rel="stylesheet" type="text/css" href="/assets/less/nav.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/less/nav.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/less/modal2.css" />
   <script src="/assets/js/nav.js"></script>
-
 </head>
+<div class="some-text">
+  <a class="button" href="#popup"></a>
+</div>
 
+<div class="popup" id="popup">
+  <div class="popup__content">
+      <h3 class="heading-tertiary">Instrucciones</h3>
+      <p class="popup__text">
+     Mueve los numeros hasta que quede como la siguiente imagen:  
+      </p>
+      <img src="../assets/img/Puzzleresuelto.jpg" alt="" style="width: 200px; height: 200px;">
+      <br>
+      <a href="#" class="close">Aceptar</a>
+  </div>
+</div>
 <body class="edades">
   <div class="content">
-
+    <div class="sliding">
+    <div class="moves">Movimientos: <span id="movesnum">0</span></div>
+    <button type="button" id="newgame">Nuevo juego</button>
+    <button type="button" id="solveit">Resolver!</button>
     <figure class="SlidingPuzzleFigure">
 
       <section>
@@ -31,16 +48,9 @@
           <li class="Tile Tile7">7</li>
           <li class="Tile Tile8">8</li>
         </ul>
-
-        <div class="moves">Movimientos: <span id="movesnum">0</span></div>
-        <button type="button" id="newgame">Nuevo juego</button>
-        <button type="button" id="solveit">Resolver!</button>
       </section>
-
     </figure>
-
-
-
+  </div>
   </div>
   </div>
 </body>

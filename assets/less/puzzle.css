@@ -5,6 +5,11 @@
 
 }
 
+.sliding {
+    display: flex;
+    flex-direction: column;
+}
+
 div#content {
     margin-top: 10px;
 }

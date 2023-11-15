@@ -118,3 +118,8 @@ tile8.addEventListener("click", moveTile);
 document.getElementById("newgame").onclick = randomizePuzzle;
 document.getElementById("solveit").onclick = solvePuzzle;
 randomizePuzzle();
+
+document.addEventListener('DOMContentLoaded', function () {
+    var modalLink = document.querySelector('.button');
+    modalLink.click();
+  });

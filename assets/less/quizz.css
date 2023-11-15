@@ -10,6 +10,16 @@
   box-sizing: border-box;
 }
 
+.contenedorquizz{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 .quizbody {
   background-color: var(--bgfont);
 }
@@ -157,7 +167,7 @@
 }
 [type="radio"]:checked ~ label {
   border-color: var(--bgprm);
-  background-color: rgba(97, 154, 234, 0.16);
+  background-color: rgb(135, 95, 226 , 0.6);
   color: var(--bgprm);
 }
 [type="radio"]:checked ~ label:before {
@@ -198,7 +208,7 @@ label {
   height: 50px;
   padding: 0 20px;
   border-radius: 30px;
-  border: 1px solid var(--bgprm);
+  border: 2px solid var(--bgprm);
   cursor: pointer;
   background-color: transparent;
   transition: all 300ms ease-in;
@@ -246,7 +256,7 @@ label > span {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  border: 2px solid #454861;
+  border: 2px solid #0019fcc4;
   background-image: linear-gradient(to bottom, #3b4059, #1c1e2d);
 }
 

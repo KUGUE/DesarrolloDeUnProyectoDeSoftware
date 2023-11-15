@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 
-.popup__content h3{
 
-  font-size: 40px;
 
-}
+ .heading-tertiary{
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+ }
+ 
 .some-text {
   position: absolute;
   top: 50%;
@@ -81,4 +84,10 @@
 .popup__text {
   font-size: 1.4rem;
   margin-bottom: 4rem;
-}/*# sourceMappingURL=modal2.css.map */
+}
+@media screen and (max-width: 768px) {
+  .heading-tertiary{
+    font-size: 40px;
+
+   }
+  }

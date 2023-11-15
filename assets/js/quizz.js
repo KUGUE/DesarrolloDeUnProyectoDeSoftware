@@ -544,7 +544,7 @@ $(document).ready(function () {
             startTimeLeft();
         }
     };
-    //showing the QUESTIONS function <--
+
 
 
 
@@ -746,34 +746,18 @@ $(document).ready(function () {
 
 
     $(".result").click(function () {
-        $(".questionbody").remove();
-        $(".resultbody").fadeIn();
-        saveRadioBtnValue();
-        clearInterval(totalSetInterval);
-        checkResults();
-        gettingPerc();
-        gettingPercTime();
-        $(".percentage").text(`${perc1}%`);
-        $(".skip-ans-given").text(SA);
-        $(".wrong-ans-given").text(WA);
-        $(".Correct-ans-given").text(CA);
-
-        // Muestra las respuestas correctas e incorrectas
-        let correctAnswersList = $("#correct-answers-list");
-        let incorrectAnswersList = $("#incorrect-answers-list");
-
-        correctAnswersList.empty();
-        incorrectAnswersList.empty();
-
-        correctAnswers.forEach(answer => {
-            correctAnswersList.append(`<li>${answer}</li>`);
-        });
-
-        incorrectAnswers.forEach(answer => {
-            incorrectAnswersList.append(`<li>${answer.question} - Tu respuesta: ${answer.userAnswer}, Respuesta correcta: ${answer.correctAnswer}</li>`);
-        });
-
-        $(".time").text(totaltime);
+       $(".questionbody").remove();
+    $(".resultbody").fadeIn();
+    saveRadioBtnValue();
+    clearInterval(totalSetInterval);
+    checkResults();
+    gettingPerc();
+    gettingPercTime();
+    $(".percentage").text(`${perc1}%`);
+    $(".skip-ans-given").text(SA);
+    $(".wrong-ans-given").text(WA);
+    $(".Correct-ans-given").text(CA);
+    $(".time").text(totaltime);
     });
 
     // adding the functionalities to buttons ends
