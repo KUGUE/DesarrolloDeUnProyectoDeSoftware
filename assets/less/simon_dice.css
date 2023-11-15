@@ -1,7 +1,6 @@
 
 .contenedorsimon{
-    display: flex;
-    flex-direction: column;
+
     align-items: center;
     padding-top: 20px;
     padding-right: 20px;
@@ -15,6 +14,24 @@
     width: 80%;
 }
 
+
+#reiniciarJuego {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  
+button {
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    color: #ffffff;
+    background-color: #313033;
+    border-radius: 0.3rem;
+    border: 2px solid black;
+    white-space: nowrap;
+    font-size: 30px;
+  }
   
 body {
     margin:0px;
@@ -32,21 +49,26 @@ body {
     color:#fff;
     }
 
-    .contenedor{
-    padding: 20px;
-    padding-bottom: 30px;
-    display:inline-block;
-    background-color: #ffffff;
-    width:200px;
-    height:300px;
-    border:1px black solid;
-    border: 1px solid rgb(12, 11, 11);
-    border-radius: 3px 3px 3px 3px;
-    -webkit-box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);;
-    }
+    .contenedor {
+        padding: 20px;
+        padding-bottom: 30px;
+        display: inline-block;
+        background-color: #ffffff;
+        width: 200px;
+        height: 300px;
+        border: 1px solid rgb(12, 11, 11);
+        border-radius: 3px 3px 3px 3px;
+        -webkit-box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
+        margin-bottom: 20px;
+      }
      
+      
+    #reiniciarJuego {
+        margin-top: 20px; /* Ajusta el margen superior del botón de reinicio según sea necesario */
+      }
+
     .figura{
     border:2px #fff solid;
     background: red;

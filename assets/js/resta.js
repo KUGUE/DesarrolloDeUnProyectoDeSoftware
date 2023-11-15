@@ -5,15 +5,15 @@ let numeroAleatorio2 = 0;
 const numero = (option) => {
   let obj = {
     1: 1,
-    2: 101,
-    3: 201,
-    4: 301,
-    5: 401,
-    6: 501,
-    7: 601,
-    8: 701,
-    9: 801,
-    10: 900
+    2: 5,
+    3: 10,
+    4: 15,
+    5: 19,
+    6: 24,
+    7: 27,
+    8: 30,
+    9: 38,    
+    10: 45  
   }
   return obj[option] ?? "Unknown"
 }
@@ -24,19 +24,22 @@ miInput.addEventListener("focus", function () {
   resultadoH1.textContent = "resultado";
   resultadoH1.style.backgroundColor = "transparent";
 });
-// Función para generar números aleatorios entre 1 y 20
 function generarNumerosAleatorios() {
   if (idAlmacenado) {
     console.log("ID almacenado:", idAlmacenado);
 
-    numeroAleatorio1 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
-    numeroAleatorio2 = Math.floor(Math.random() * 100) + numero(idAlmacenado);
+    do {
+      numeroAleatorio1 = Math.floor(Math.random() * 10) + numero(idAlmacenado);
+      numeroAleatorio2 = Math.floor(Math.random() * 10) + numero(idAlmacenado);
+    } while (numeroAleatorio1 - numeroAleatorio2 < 0);
   } 
+
   document.getElementById("escribir").textContent = numeroAleatorio1;
   document.getElementById("escribir2").textContent = numeroAleatorio2;
   console.log(numeroAleatorio1 - numeroAleatorio2);
   return numeroAleatorio1 - numeroAleatorio2;
 }
+
 
 const botonCalcular = document.getElementById("calcularButton");
 const resultadoH1 = document.querySelector(".resultado");
